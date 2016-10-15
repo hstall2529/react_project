@@ -24,10 +24,10 @@ var App = React.createClass({
 
 			<div>
 				<div className="header">
-					<div className="title">STUDENT ROSTER</div>
+					<div className="title">DORM LIST</div>
 					<table className="nav-bar">
-						<td><button className="nav-item create" onClick={() => {this.setState({curpage: 'create'})}}>NEW STUDENT</button></td>
-						<td><button className="nav-item getall" onClick={() => {this.setState({curpage: 'getall'})}}>ALL STUDENTS</button></td>
+						<td><button className="nav-item create" onClick={() => {this.setState({curpage: 'create'})}}>NEW DORM</button></td>
+						<td><button className="nav-item getall" onClick={() => {this.setState({curpage: 'getall'})}}>ALL DORMS</button></td>
 					</table>
 				</div>
 				{(this.state.curpage === 'create') ? <AddStudent /> : <AllStudents />}

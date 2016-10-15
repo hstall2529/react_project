@@ -1,9 +1,10 @@
 button {
 	background-color: transparent;
-	border: none;
+	border-color: #7C9E0E;
 }
 
 .container {
+	line-height: 30px;
 	margin: 20px auto;
 	max-width: 1200px;
 	text-align: center;

@@ -13,11 +13,11 @@ var NavBar = React.createClass({
 
 		return (
 			<div className="header">
-				<div className="title">STUDENT ROSTER</div>
+				<div className="title">DORM LIST</div>
 				<table className="nav-bar">
-					<td><button className="nav-item create" onclick={() => {this.setState({curpage: 'create'})}}>NEW STUDENT</button></td>
+					<td><button className="nav-item create" onclick={() => {this.setState({curpage: 'create'})}}>Add Dormitory</button></td>
 					<td><button className="nav-item find" onclick={() => {this.setState({curpage: 'find'})}}>FIND STUDENT</button></td>
-					<td><button className="nav-item getall" onclick={() => {this.setState({curpage: 'getall'})}}>ALL STUDENTS</button></td>
+					<td><button className="nav-item getall" onclick={() => {this.setState({curpage: 'getall'})}}>All Dorms</button></td>
 				</table>
 			</div>
 		);
