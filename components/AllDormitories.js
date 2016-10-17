@@ -2,7 +2,6 @@
 // https://facebook.github.io/react/docs/thinking-in-react.html
 
 var React = require('react');
-var global_response_data = {};
 var AllDormitories = React.createClass({
 
     handleData(data) {
@@ -22,7 +21,6 @@ var AllDormitories = React.createClass({
             url: 'http://localhost:8080/api/dormitories'
         }).done(function(data) {
             reqdata = data;
-            global_response_data = data;
             self.handleData(data);
             console.log('successfully retrieved dorm data');
         }).fail(function(jqXhr) {
@@ -33,11 +31,9 @@ var AllDormitories = React.createClass({
 
     render() {
         var dorms = [];
-        if (this.state.dorms){
-            this.state.dorms.forEach(function(dorm) {
-                dorms.push(<DormRow dID={dorm.id} dName={dorm.dormName} />)
-            });
-        }
+        this.state.dorms.forEach(function(dorm) {
+            dorms.push(<DormRow dID={dorm.id} dName={dorm.dormName} />)
+        });
 
         return (
             <table>
