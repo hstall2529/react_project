@@ -1,6 +1,6 @@
 var React = require('react');
 
-var AddStudent = React.createClass({
+var AddDormitory = React.createClass({
 
     getInitialState() {
         return {
@@ -30,9 +30,11 @@ var AddStudent = React.createClass({
             contentType: 'application/json',
             data: reqstring
         }).done(function(data) {
-            console.log('You made a new dorm!')
+            console.log('You made a new dorm!');
+            alert('You have created a new dorm!');
         }).fail(function(jqXhr) {
             console.log('failed to register');
+            alert('You could not create a new dorm.');
         });
     },
 
@@ -53,4 +55,4 @@ var AddStudent = React.createClass({
     }
 });
 
-module.exports = AddStudent;
+module.exports = AddDormitory;
